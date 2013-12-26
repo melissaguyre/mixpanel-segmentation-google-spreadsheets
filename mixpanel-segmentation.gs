@@ -49,8 +49,8 @@ var TO_DATE = getMixpanelDateYesterday();
  * unit - This can be 'minute', 'hour', 'day', or 'month'.
  */
 var API_PARAMETERS = {
-    'Sheet 1' : [ 'event', 'where', 'type', 'day' ],
-    'Sheet 2' :  [ 'event', 'where', 'type', 'day' ],
+    'Sheet 1' : [ 'event', 'where', 'type', 'unit' ],
+    'Sheet 2' :  [ 'event', 'where', 'type', 'unit' ],
 };
 
 /**
