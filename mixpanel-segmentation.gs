@@ -38,7 +38,8 @@ var TO_DATE = getMixpanelDateYesterday();
  * Step 4) Define Segmentation Queries - Get data for an event, segmented and filtered by properties.
  *
  * Format is: 'Sheet Name' : [ 'event', 'where', 'type', 'unit' ],
- * For example: 'Unique Yums' : [ 'Yum Button', '(properties["Platform"])=="iPhone App" and (properties["mp_country_code"])=="GB"', 'unique', 'day' ],
+ *
+ * For example: 'Sign Ups' : [ '$signup', '(properties["Platform"])=="iPhone" and (properties["mp_country_code"])=="GB"', 'general', 'day' ],
  *
  * For full details on Segmentation Queries https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-default
  * Sheet Name - What you want the sheet with your data to be called.
