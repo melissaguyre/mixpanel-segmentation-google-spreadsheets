@@ -1,4 +1,3 @@
-
 /********************************************************************************
  * Mixpanel Segmentation Data Export
  *
@@ -220,7 +219,7 @@ function sortApiParameters(parameters) {
  * http://stackoverflow.com/questions/3830244/get-current-date-time-in-seconds
  */
 function getApiExpirationTime() {
-  var expiration = Date.now() + 10*60*1000;
+  var expiration = Date.now() + 10 * 60 * 1000;
   // Logger.log("getApiExpirationTime() " + expiration);
   
   return expiration;
@@ -259,35 +258,35 @@ function getApiSignature(expires, sheetName) {
 function getMixpanelDateToday() {
   var today = new Date();
   var dd = today.getDate();
-  var mm = today.getMonth()+1; //January is 0!
+  var mm = today.getMonth() + 1; 
   var yyyy = today.getFullYear();
   
   if (dd < 10) {
-    dd='0'+dd
+    dd = '0' + dd
   } 
   if ( mm < 10 ) {
-    mm='0'+mm
+    mm = '0' + mm
   } 
   
-  today = yyyy+'-'+mm+'-'+dd;
+  today = yyyy + '-' + mm + '-' + dd;
   return today;
 }
 
 // Returns yesterday's's date string in Mixpanel date format '2013-09-11'
 function getMixpanelDateYesterday(){
   var yesterday = new Date();
-  var dd = yesterday.getDate()-1;
-  var mm = yesterday.getMonth()+1; //January is 0!
+  var dd = yesterday.getDate() - 1;
+  var mm = yesterday.getMonth() + 1; 
   var yyyy = yesterday.getFullYear();
   
   if (dd < 10) {
-    dd='0'+dd
+    dd = '0' + dd
   } 
   if (mm < 10) {
-    mm='0'+mm
+    mm = '0' + mm
   } 
   
-  yesterday = yyyy+'-'+mm+'-'+dd;
+  yesterday = yyyy + '-' + mm + '-' + dd;
   return yesterday;
 }
 
