@@ -281,9 +281,9 @@ function getMixpanelDateYesterday(){
   //Logger.log(yesterday);
   var dd = yesterday.getDate();
   //Logger.log(yesterday);
-  var mm = yesterday.getMonth()+1; //January is 0!
-
+  var mm = yesterday.getMonth() + 1;
   var yyyy = yesterday.getFullYear();
+  
   if (dd < 10) {
     dd = '0' + dd;
   }
@@ -292,7 +292,6 @@ function getMixpanelDateYesterday(){
   }
   
   yesterday = yyyy + '-' + mm + '-' + dd;
-
   //Logger.log(yesterday);
   return yesterday;
 }
