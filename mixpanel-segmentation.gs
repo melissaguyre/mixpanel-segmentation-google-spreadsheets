@@ -274,19 +274,26 @@ function getMixpanelDateToday() {
 
 // Returns yesterday's's date string in Mixpanel date format '2013-09-11'
 function getMixpanelDateYesterday(){
-  var yesterday = new Date();
-  var dd = yesterday.getDate() - 1;
-  var mm = yesterday.getMonth() + 1; 
-  var yyyy = yesterday.getFullYear();
+  var today = new Date();
+  var yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
   
+  //Logger.log(yesterday);
+  var dd = yesterday.getDate();
+  //Logger.log(yesterday);
+  var mm = yesterday.getMonth()+1; //January is 0!
+
+  var yyyy = yesterday.getFullYear();
   if (dd < 10) {
     dd = '0' + dd;
-  } 
+  }
   if (mm < 10) {
     mm = '0' + mm;
-  } 
+  }
   
   yesterday = yyyy + '-' + mm + '-' + dd;
+
+  //Logger.log(yesterday);
   return yesterday;
 }
 
